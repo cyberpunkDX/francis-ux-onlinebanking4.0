@@ -41,8 +41,8 @@
 <body class="hold-transition bg-gradient-blue theme-primary bg-img text-primary"
     style="">
     @include('partials.theme_alert')
-    <div class="container bg-gradient-blue">
-        <div class="row">
+    <div class="container">
+        <div class="row mx-2">
             <div class="bg-navy rounded shadow-lg col-md-6 offset-md-3 col-12 mt-100 p-5">
                 <div class="rounded10 ">
                     <div class="content-top-agile p-20 pb-0">
@@ -51,7 +51,7 @@
                         <h4 class="text-primary">{{ $title }}</h4>
                         <p class="mb-0">Please enter login credentials</p>
                     </div>
-                    <div class="p-40">
+                    <div class="p-4">
                         @if (session('status'))
                             <p class="text-success"> {{ session('status') }}</p>
                         @endif

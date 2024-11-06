@@ -68,7 +68,7 @@
                                                     <label for="">First name</label>
                                                     <input type="text" name="first_name"
                                                         value="<?= old('first_name') ?>"
-                                                        class="form-control bg-light border-1 small" id=""
+                                                        class="form-control bg-navy border-1 small" id=""
                                                         placeholder="First Name">
                                                 </div>
                                             </div>
@@ -77,7 +77,7 @@
                                                     <label for="">Last name</label>
                                                     <input type="text" name="last_name"
                                                         value="<?= old('last_name') ?>"
-                                                        class="form-control bg-light border-1 small" id=""
+                                                        class="form-control bg-navy border-1 small" id=""
                                                         placeholder="Last Name">
                                                 </div>
                                             </div>
@@ -85,7 +85,7 @@
                                                 <div class="form-group">
                                                     <label for="">Email address</label>
                                                     <input type="email" name="email" value="<?= old('email') ?>"
-                                                        class="form-control bg-light border-1 small"
+                                                        class="form-control bg-navy border-1 small"
                                                         id="exampleInputEmail" placeholder="Email Address">
                                                 </div>
                                             </div>
@@ -94,7 +94,7 @@
                                                     <label for="">Registration token</label>
                                                     <input type="text" name="registration_token"
                                                         value="<?= old('registration_token') ?>"
-                                                        class="form-control bg-light border-1 small" id=""
+                                                        class="form-control bg-navy border-1 small" id=""
                                                         placeholder="Registration token">
                                                     <input type="hidden" name="referred" value="0">
                                                 </div>
@@ -104,13 +104,13 @@
                                                 <div class="form-group">
                                                     <label for="">Date of Birth</label>
                                                     <input value="<?= old('dob') ?>" type="date" name="dob"
-                                                        class="form-control bg-light border-1 small" id="">
+                                                        class="form-control text-light bg-navy border-1 small" id="">
                                                 </div>
                                             </div>
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <div class="form-group">
                                                     <label for="">Gender</label>
-                                                    <select class="form-control bg-light border-1 small" name="gender"
+                                                    <select class="form-control bg-navy border-1 small" name="gender"
                                                         id="">
                                                         <option value="">Select</option>
                                                         <option value="male"
@@ -129,7 +129,7 @@
                                                 <div class="form-group">
                                                     <label for="">Marital Status</label>
                                                     <select name="marital_status" id=""
-                                                        class="form-control bg-light border-1 small">
+                                                        class="form-control bg-navy border-1 small">
                                                         <option value="">Select</option>
                                                         <option value="single"
                                                             {{ old('marital_status') == 'single' ? 'selected' : '' }}>
@@ -153,7 +153,7 @@
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <label for="">Dial code</label>
                                                 <select name="dial_code" id=""
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                                     <option value="">Select</option>
                                                     @foreach (config('setting.dial_code') as $key => $dialCode)
                                                         <option value="+{{ $key }}"
@@ -166,7 +166,7 @@
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <label for="">Phone</label>
                                                 <input type="number" name="phone"
-                                                    class="form-control bg-light border-1 small"
+                                                    class="form-control bg-navy border-1 small"
                                                     value="<?= old('phone') ?>" placeholder="Phone">
                                             </div>
 
@@ -175,24 +175,24 @@
                                                 <input type="text" placeholder="e.g Employed, Student, Engineer"
                                                     value="<?= old('professional_status') ?>"
                                                     name="professional_status"
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                             </div>
                                             <div class="mb-2 col-12">
                                                 <label for="">Address</label>
                                                 <input type="text" placeholder="Your contact address"
                                                     name="address" value="<?= old('address') ?>"
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                             </div>
                                             <div class="mb-2 col-sm-6">
                                                 <label for="">State</label>
                                                 <input type="text" placeholder="Your state" name="state"
                                                     value="<?= old('state') ?>"
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                             </div>
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <label for="">Nationality</label>
                                                 <select name="nationality" id=""
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                                     <option value="">Select</option>
                                                     @foreach (config('setting.nationality') as $key => $nationality)
                                                         <option value="{{ $nationality }}"
@@ -205,7 +205,7 @@
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <label for="">Currency</label>
                                                 <select name="currency" id=""
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                                     <option value="">Select</option>
                                                     @foreach (config('setting.currency') as $key => $currency)
                                                         <option
@@ -218,7 +218,7 @@
                                             <div class="mb-2 col-sm-12 col-md-6 col-md-4">
                                                 <label for="">Account Type</label>
                                                 <select name="account_type" id=""
-                                                    class="form-control bg-light border-1 small">
+                                                    class="form-control bg-navy border-1 small">
                                                     <option value="savings" {{ old('account_type') == 'savings' }}>
                                                         Savings account</option>
                                                     <option value="current" {{ old('account_type') == 'current' }}>
@@ -232,7 +232,7 @@
                                                 <div class="form-group">
                                                     <label for="password">Password</label>
                                                     <input type="password" required name="password" value=""
-                                                        class="form-control bg-light border-1 small" id="password"
+                                                        class="form-control bg-navy border-1 small" id="password"
                                                         placeholder="Password" required autocomplete="new-password">
                                                     @if ($errors->has('password'))
                                                         <p class="text-danger">{{ $errors->first('password') }}</p>
@@ -243,7 +243,7 @@
                                                 <div class="form-group">
                                                     <label for="password_confirmation">Confirm Password</label>
                                                     <input type="password" required name="password_confirmation"
-                                                        class="form-control bg-light border-1 small" id=""
+                                                        class="form-control bg-navy border-1 small" id=""
                                                         placeholder="Repeat Password">
                                                     @if ($errors->has('password_confirmation'))
                                                         <p class="text-danger">{{ $errors->first('password_confirmation') }}</p>

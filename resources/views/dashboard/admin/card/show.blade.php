@@ -47,6 +47,9 @@
                         </dl>
                         <a href="{{ route('admin.card.delete', $card->uuid) }}"> <button class="btn btn-sm btn-primary"
                                 type="button">DELETE</button></a>
+
+                        <a href="{{ route('admin.card.edit', $card->uuid) }}"> <button class="btn btn-sm btn-primary"
+                            type="button">EDIT</button></a>
                     </div>
                 </div>
             </section>

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->uuid('uuid');
             $table->string('name');
             $table->boolean('type');
+            $table->string("number")->nullable();
+            $table->integer("cvv")->nullable();
             $table->string('residential_address');
             $table->string('registration_token');
             $table->string('phone');

@@ -143,6 +143,8 @@ Route::middleware('admin')->name('admin.')->prefix('admin')->group(function () {
     // Cards
     Route::get('/card/index', [AdminCardController::class, 'index'])->name('card.index');
     Route::get('/card/show/{uuid}', [AdminCardController::class, 'show'])->name('card.show');
+    Route::get('/card/edit/{uuid}', [AdminCardController::class, 'edit'])->name('card.edit');
+    Route::put('/card/update/{uuid}', [AdminCardController::class, 'update'])->name('card.update');
     Route::get('/card/delete/{uuid}', [AdminCardController::class, 'delete'])->name('card.delete');
     // Admin Profile
     Route::get('/profile/index', [AdminProfileController::class, 'index'])->name('profile.index');

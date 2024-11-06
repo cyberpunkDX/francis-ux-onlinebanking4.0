@@ -35,6 +35,18 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-7">
                                     @include('partials.validation_message')
+                                    @if ($user->card->cvv != null)
+                                        <div class="bg-gradient-blue rounded shadow p-4">
+                                            <p class="fw-bold display-6">
+                                                {{ $user->card ? currency($user->currency) . formatAmount($user->card->balance) : "00" }}
+                                            </p>
+                                            <p class="fw-bold">{{ $user->card ? $user->card->number : "********" }}</p>
+                                            <div class="d-flex justify-content-between">
+                                                <small><span class="fw-bold"></span> {{ $user->card ? $user->card->date : "00/00"  }}</small>
+                                                <small><span class="fw-bold"></span>{{ $user->card ? $user->card->cvv : "***"  }}</small>
+                                            </div>
+                                        </div>
+                                    @endif
                                     <div class="box-body">
                                         <form action="{{ route('user.card.store') }}" method="post">
                                             @csrf

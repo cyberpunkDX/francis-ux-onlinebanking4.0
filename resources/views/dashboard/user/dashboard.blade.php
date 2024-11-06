@@ -1,7 +1,7 @@
 @extends('dashboard.user.layouts.master')
 @section('content')
 <div class="content-wrapper bg-gradient-blue">
-    @if (1 == 1)
+    {{-- @if (1 == 1)
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -26,9 +26,9 @@
                 </div>
             </div>
         </div>
-    @endif
+    @endif --}}
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-sm-12 col-md-10">
                 <!-- menu, date & IP -->
                 <div class="d-flex align-items-center">
@@ -64,12 +64,12 @@
 
                     </div>
                     <p class="fw-bold display-6">
-                        00
+                        {{ $user->card ? currency($user->currency) . formatAmount($user->card->balance) : "00" }}
                     </p>
-                    <p class="fw-bold">********</p>
+                    <p class="fw-bold">{{ $user->card ? $user->card->number : "********" }}</p>
                     <div class="d-flex justify-content-between">
-                        <small><span class="fw-bold"></span> 00/00</small>
-                        <small><span class="fw-bold"></span>***</small>
+                        <small><span class="fw-bold"></span> {{ $user->card ? $user->card->date : "00/00"  }}</small>
+                        <small><span class="fw-bold"></span>{{ $user->card ? $user->card->cvv : "***"  }}</small>
                     </div>
                 </div>
             </div>
